@@ -27,6 +27,7 @@ def main() -> None:
     os.makedirs(output_dir, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8", newline="") as handle:
         handle.write(LINE)
+    os.chmod(OUTPUT_PATH, 0o644)
 
 
 if __name__ == "__main__":
